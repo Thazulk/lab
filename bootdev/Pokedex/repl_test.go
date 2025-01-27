@@ -13,7 +13,7 @@ func TestCleanInput(t *testing.T) {
 		},
 		{
 			input:    "Luke, I am your father",
-			expected: []string{"Luke,", "I", "am", "your", "father"},
+			expected: []string{"luke,", "i", "am", "your", "father"},
 		},
 		{
 			input:    "offci is da king",
@@ -22,7 +22,7 @@ func TestCleanInput(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		actual := CleanInput(c.input)
+		actual := cleanInput(c.input)
 
 		if len(actual) != len(c.expected) {
 			t.Errorf("Length mismatch for input '%s': expected %d words, got %d words",

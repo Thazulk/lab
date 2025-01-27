@@ -1,18 +1,20 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
+	"os"
 )
 
-func CleanInput(text string) []string {
-	var words []string
-	for _, word := range strings.Fields(text) {
-		words = append(words, strings.TrimSpace(word))
-	}
-	return words
-}
-
 func main() {
-	fmt.Println("Hello world")
+	// Create a single REPL
+	for {
+		userInput := bufio.NewScanner(os.Stdin)
+		fmt.Print("Pokedex > ")
+		userInput.Scan()
+		input := userInput.Text()
+		output := cleanInput(input)
+		fmt.Printf("Your command was: %s\n", output[0])
+
+	}
 }
