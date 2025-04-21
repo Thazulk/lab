@@ -1,0 +1,11 @@
+{
+  "name": "heifer",
+  "version": "1.0.0",
+  "description": "Bootdev js course, runtimes section",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Thazulk",
+  "license": "ISC"
+}
